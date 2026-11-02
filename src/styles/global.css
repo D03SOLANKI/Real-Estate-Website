@@ -1,0 +1,261 @@
+@import './variables.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--color-base-0);
+  color: var(--color-base-1000);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--body-size);
+  line-height: 1.6;
+  background-color: var(--color-base-0);
+  color: var(--color-base-1000);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: inherit;
+}
+
+h1 { font-size: var(--h1-size); font-weight: 300; }
+h2 { font-size: var(--h2-size); }
+h3 { font-size: var(--h3-size); }
+h4 { font-size: var(--h4-size); font-family: var(--font-body); font-weight: 500; }
+h5 { font-size: var(--h5-size); font-family: var(--font-body); font-weight: 600; }
+h6 { font-size: var(--h6-size); font-family: var(--font-body); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; }
+
+p {
+  color: var(--color-base-1000-60);
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Focus styles for keyboard navigation */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid var(--color-plum);
+  outline-offset: 3px;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.section {
+  position: relative;
+  padding-top: var(--spacing-2xl);
+  padding-bottom: var(--spacing-2xl);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+  }
+}
+
+/* Themes */
+.theme-light {
+  background-color: var(--color-base-0);
+  color: var(--color-base-1000);
+}
+
+.theme-dark {
+  background-color: var(--color-base-1000);
+  color: var(--color-base-0);
+}
+.theme-dark p {
+  color: var(--color-white-80);
+}
+
+.theme-plum {
+  background-color: var(--color-plum);
+  color: var(--color-base-0);
+}
+.theme-plum p {
+  color: var(--color-white-80);
+}
+
+/* Luxury Pill / Button Styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.95rem 2.2rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-plum);
+  color: var(--color-base-0);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: all var(--transition-normal);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-plum-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(52, 12, 36, 0.25);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.9rem 2.2rem;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: currentColor;
+  border: 1px solid currentColor;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: currentColor;
+  color: var(--color-base-0);
+  transform: translateY(-2px);
+}
+.theme-dark .btn-outline:hover {
+  color: var(--color-base-1000);
+}
+
+/* Text Wordmark Brand Styling */
+.brand-wordmark {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-plum);
+  display: inline-block;
+}
+.theme-dark .brand-dot {
+  background-color: var(--color-sky);
+}
+
+/* Editorial Serif Accent Script */
+.font-accent {
+  font-family: var(--font-accent);
+  font-size: 1.6em;
+  color: var(--color-plum);
+  vertical-align: middle;
+  padding: 0 0.2em;
+}
+.theme-dark .font-accent {
+  color: var(--color-blush);
+}
+
+/* Rotating circular badge CTA */
+.rotating-badge {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.rotating-badge svg.circle-text {
+  width: 100%;
+  height: 100%;
+  animation: spin 18s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rotating-badge:hover svg.circle-text {
+  animation-duration: 9s;
+}
+
+.rotating-badge .badge-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--color-plum);
+  color: var(--color-base-0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-normal);
+}
+
+.rotating-badge:hover .badge-icon {
+  transform: translate(-50%, -50%) scale(1.1);
+}

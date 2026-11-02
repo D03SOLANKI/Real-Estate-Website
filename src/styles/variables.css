@@ -1,0 +1,63 @@
+:root {
+  /* Brand Palette (Identical in mood and harmony to reference tokens) */
+  --color-base-0: #f3f3ec;             /* Warm Alabaster stone background */
+  --color-base-100: #ebebe2;           /* Soft stone card / section tint */
+  --color-base-1000: #17233b;          /* Midnight slate navy - typography & dark surfaces */
+  --color-base-1000-60: rgba(23, 35, 59, 0.6);
+  --color-base-1000-30: rgba(23, 35, 59, 0.3);
+  --color-base-1000-10: rgba(23, 35, 59, 0.1);
+  --color-base-1000-5: rgba(23, 35, 59, 0.05);
+
+  --color-plum: #340c24;               /* Velvet Plum signature luxury accent */
+  --color-plum-hover: #481132;
+  --color-sky: #b5cedb;                /* Powder sky blue accent */
+  --color-blush: #f8bbcb;              /* Soft blush bloom highlight */
+  --color-white: #ffffff;
+  --color-white-80: rgba(255, 255, 255, 0.8);
+  --color-white-40: rgba(255, 255, 255, 0.4);
+  --color-white-15: rgba(255, 255, 255, 0.15);
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', Garamond, 'Times New Roman', serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-accent: 'Alex Brush', cursive;
+
+  /* Font Scale */
+  --h1-size: clamp(2.8rem, 7vw, 6.5rem);
+  --h2-size: clamp(2.2rem, 5vw, 4.5rem);
+  --h3-size: clamp(1.8rem, 3.5vw, 3rem);
+  --h4-size: clamp(1.35rem, 2.2vw, 2rem);
+  --h5-size: clamp(1.1rem, 1.5vw, 1.4rem);
+  --h6-size: clamp(0.85rem, 1.2vw, 1rem);
+  --body-size: 1rem;
+  --small-size: 0.85rem;
+
+  /* Spacing Scale */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2.5rem;
+  --spacing-xl: 4rem;
+  --spacing-2xl: 7rem;
+  --spacing-3xl: 10rem;
+
+  /* Container & Grid */
+  --container-max-width: 1440px;
+  --container-padding: clamp(1.25rem, 4vw, 4.5rem);
+  --header-height: 80px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  /* Shadows & Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+  --shadow-subtle: 0 4px 20px rgba(23, 35, 59, 0.06);
+  --shadow-medium: 0 12px 40px rgba(23, 35, 59, 0.12);
+  --shadow-deep: 0 24px 60px rgba(23, 35, 59, 0.18);
+}

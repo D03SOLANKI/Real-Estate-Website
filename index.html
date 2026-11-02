@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Aurelia Residence — Modern Living, Timeless Comfort</title>
+    <meta name="title" content="Aurelia Residence — Modern Living, Timeless Comfort" />
+    <meta name="description" content="Aurelia Residence by Aurelia Living Spaces is an exclusive boutique sanctuary of 25 bespoke residences located at 24 Skyline Avenue, Ahmedabad, Gujarat, India. Designed around privacy, wellbeing and timeless architectural refinement." />
+    <meta name="keywords" content="Aurelia Residence, luxury apartments Ahmedabad, boutique residences Gujarat, luxury homes, Aurelia Living Spaces" />
+    <meta name="author" content="Aurelia Living Spaces" />
+    <meta name="theme-color" content="#17233b" />
+    <link rel="canonical" href="https://aurelialiving.example" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aurelialiving.example" />
+    <meta property="og:title" content="Aurelia Residence — Modern Living, Timeless Comfort" />
+    <meta property="og:description" content="A boutique sanctuary of 25 bespoke residences at 24 Skyline Avenue, Ahmedabad, Gujarat, India. Modern living, timeless comfort." />
+    <meta property="og:image" content="https://aurelialiving.example/assets/images/og-hero.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://aurelialiving.example" />
+    <meta property="twitter:title" content="Aurelia Residence — Modern Living, Timeless Comfort" />
+    <meta property="twitter:description" content="A boutique sanctuary of 25 bespoke residences at 24 Skyline Avenue, Ahmedabad, Gujarat, India. Modern living, timeless comfort." />
+    <meta property="twitter:image" content="https://aurelialiving.example/assets/images/og-hero.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2317233b'/><text x='50%' y='62%' text-anchor='middle' font-family='serif' font-size='56' fill='%23f3f3ec' font-weight='bold'>A</text></svg>" />
+
+    <!-- Typography (Google Fonts: Cormorant Garamond for luxury serif + Plus Jakarta Sans for extended body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Preload Hero Image for high LCP performance -->
+    <link rel="preload" as="image" href="/assets/images/hero-day.jpg" fetchpriority="high" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://aurelialiving.example/#organization",
+          "name": "Aurelia Living Spaces",
+          "url": "https://aurelialiving.example",
+          "email": "hello@aurelialiving.example",
+          "telephone": "+91 98765 43210",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "24 Skyline Avenue",
+            "addressLocality": "Ahmedabad",
+            "addressRegion": "Gujarat",
+            "addressCountry": "India"
+          },
+          "sameAs": [
+            "https://instagram.com/aureliaresidence",
+            "https://facebook.com/aureliaresidence",
+            "https://youtube.com/@aureliaresidence",
+            "https://linkedin.com/company/aurelia-living-spaces"
+          ]
+        },
+        {
+          "@type": "RealEstateListing",
+          "@id": "https://aurelialiving.example/#project",
+          "name": "Aurelia Residence",
+          "description": "Modern Living, Timeless Comfort. A boutique gated community of 25 luxury residences in Ahmedabad.",
+          "url": "https://aurelialiving.example",
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "INR",
+            "offerCount": "25"
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

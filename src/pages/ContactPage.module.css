@@ -1,0 +1,427 @@
+.contactPage {
+  background-color: var(--color-base-0);
+  min-height: 100vh;
+  padding-top: var(--header-height);
+}
+
+.headerSection {
+  background-color: var(--color-base-100);
+  padding: 4.5rem 0 3.5rem;
+  border-bottom: 1px solid var(--color-base-1000-10);
+}
+
+.categoryLabel {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-plum);
+  margin-bottom: 0.75rem;
+}
+
+.pageTitle {
+  font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--color-base-1000);
+  margin-bottom: 1rem;
+}
+
+.pageSubtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-base-1000-60);
+  max-width: 650px;
+}
+
+/* ======================================================== */
+/* MAIN CONTENT GRID */
+/* ======================================================== */
+.mainSection {
+  padding: 5rem 0 6rem;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4.5rem;
+  align-items: flex-start;
+}
+
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.infoCard {
+  background-color: #ffffff;
+  padding: 2.2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-base-1000-10);
+  box-shadow: var(--shadow-subtle);
+}
+
+.cardHeaderSmall {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-plum);
+  margin-bottom: 0.5rem;
+}
+
+.cardHeading {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 400;
+  color: var(--color-base-1000);
+  margin-bottom: 1.25rem;
+}
+
+.cardAddress {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-base-1000-60);
+  margin-bottom: 1.25rem;
+}
+
+.hoursBox {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--color-base-1000-60);
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-base-1000-10);
+}
+
+.pinIcon {
+  color: var(--color-plum);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contactMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.methodCard {
+  background-color: #ffffff;
+  padding: 1.25rem 1.75rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-base-1000-10);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  text-decoration: none;
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition-fast);
+}
+
+.methodCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-plum);
+  box-shadow: var(--shadow-medium);
+}
+
+.methodIconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(52, 12, 36, 0.08);
+  color: var(--color-plum);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.methodLabel {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--color-base-1000-60);
+  letter-spacing: 0.04em;
+}
+
+.methodValue {
+  font-size: 0.95rem;
+  color: var(--color-base-1000);
+}
+
+.arrowIcon {
+  margin-left: auto;
+  color: var(--color-base-1000-30);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.methodCard:hover .arrowIcon {
+  transform: translate(2px, -2px);
+  color: var(--color-plum);
+}
+
+.reraNoticeCard {
+  background-color: var(--color-base-100);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-base-1000-10);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-base-1000-60);
+}
+
+.reraNoticeCard strong {
+  display: block;
+  color: var(--color-base-1000);
+  margin-bottom: 0.4rem;
+}
+
+.reraNoticeCard code {
+  background-color: rgba(23, 35, 59, 0.08);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.82rem;
+}
+
+/* ======================================================== */
+/* FORM SECTION */
+/* ======================================================== */
+.formCol {
+  width: 100%;
+}
+
+.formWrapper {
+  background-color: #ffffff;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-base-1000-10);
+  box-shadow: var(--shadow-subtle);
+}
+
+.formTitle {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--color-base-1000);
+  margin-bottom: 0.5rem;
+}
+
+.formSubtitle {
+  font-size: 0.92rem;
+  color: var(--color-base-1000-60);
+  margin-bottom: 2rem;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-base-1000);
+}
+
+.input, .select, .textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-base-1000-10);
+  background-color: var(--color-base-0);
+  font-size: 0.92rem;
+  color: var(--color-base-1000);
+  font-family: var(--font-body);
+  transition: all var(--transition-fast);
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: var(--color-plum);
+  box-shadow: 0 0 0 3px rgba(52, 12, 36, 0.1);
+}
+
+.inputError {
+  border-color: #d93838;
+}
+
+.errorMsg {
+  font-size: 0.75rem;
+  color: #d93838;
+}
+
+.consentGroup {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.checkbox {
+  margin-top: 3px;
+  accent-color: var(--color-plum);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.consentLabel {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--color-base-1000-60);
+  cursor: pointer;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 1.15rem;
+  margin-top: 0.75rem;
+}
+
+/* Success State */
+.successState {
+  text-align: center;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.successIcon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background-color: rgba(52, 12, 36, 0.08);
+  color: var(--color-plum);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.successTitle {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+}
+
+.successText {
+  font-size: 0.95rem;
+  color: var(--color-base-1000-60);
+  max-width: 480px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.endpointAlert {
+  background-color: #fff9e6;
+  border: 1px solid #f0d588;
+  border-radius: var(--radius-sm);
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+  text-align: left;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #695211;
+  margin-bottom: 2rem;
+}
+
+.alertIcon {
+  flex-shrink: 0;
+  color: #b8860b;
+  margin-top: 2px;
+}
+
+/* ======================================================== */
+/* MAP SECTION */
+/* ======================================================== */
+.mapSection {
+  background-color: var(--color-base-100);
+  padding: 5rem 0 6rem;
+  border-top: 1px solid var(--color-base-1000-10);
+}
+
+.mapHeader {
+  max-width: 720px;
+  margin-bottom: 3rem;
+}
+
+.mapTitle {
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-weight: 300;
+  color: var(--color-base-1000);
+  margin-bottom: 0.75rem;
+}
+
+.mapSubtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-base-1000-60);
+}
+
+.mapGraphicWrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-deep);
+}
+
+.mapSvg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mapDirectionsPrompt {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 10;
+}
+
+@media (max-width: 1024px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+  .mapDirectionsPrompt {
+    position: static;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .mapDirectionsPrompt .btn-primary {
+    width: 100%;
+  }
+}

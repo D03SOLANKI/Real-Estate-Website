@@ -1,0 +1,461 @@
+.detailPage {
+  background-color: var(--color-base-0);
+  min-height: 100vh;
+  padding-top: var(--header-height);
+}
+
+.topBar {
+  background-color: var(--color-base-100);
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--color-base-1000-10);
+}
+
+.topBarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-base-1000);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.backLink:hover {
+  transform: translateX(-4px);
+  color: var(--color-plum);
+}
+
+.topMeta {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-base-1000-60);
+}
+
+/* ======================================================== */
+/* HERO & MEDIA GRID */
+/* ======================================================== */
+.heroSection {
+  padding: 3.5rem 0 5rem;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.mediaCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mainImageWrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 16/10;
+  background-color: var(--color-base-100);
+  box-shadow: var(--shadow-medium);
+  cursor: pointer;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.mainImageWrapper:hover .mainImage {
+  transform: scale(1.03);
+}
+
+.lightboxPill {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  background-color: rgba(23, 35, 59, 0.8);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.mainImageWrapper:hover .lightboxPill {
+  background-color: var(--color-plum);
+}
+
+.thumbnails {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.thumbBtn {
+  width: 90px;
+  height: 60px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 2px solid transparent;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.thumbActive {
+  border-color: var(--color-plum);
+}
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Floor Plan Card */
+.planCard {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border: 1px solid var(--color-base-1000-10);
+  box-shadow: var(--shadow-subtle);
+  margin-top: 1rem;
+}
+
+.planCardHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.planSub {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-plum);
+  margin-bottom: 0.25rem;
+}
+
+.planTitle {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-base-1000);
+}
+
+.planSvgContainer {
+  background-color: var(--color-base-0);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  cursor: pointer;
+  border: 1px solid var(--color-base-1000-10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+}
+
+.planSvgContainer:hover {
+  transform: scale(1.01);
+}
+
+.planSvgImg {
+  width: 100%;
+  height: auto;
+  max-height: 440px;
+  object-fit: contain;
+}
+
+/* ======================================================== */
+/* STICKY INFO CARD */
+/* ======================================================== */
+.infoCol {
+  position: relative;
+}
+
+.stickyCard {
+  position: sticky;
+  top: calc(var(--header-height) + 2rem);
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  border: 1px solid var(--color-base-1000-10);
+  box-shadow: var(--shadow-medium);
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.typeBadge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-plum);
+}
+
+.statusBadge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+}
+
+.statusAvail {
+  background-color: #e6f6ec;
+  color: #178a46;
+}
+
+.statusRes {
+  background-color: #fbf0df;
+  color: #a46d18;
+}
+
+.unitTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--color-base-1000);
+  margin-bottom: 0.25rem;
+}
+
+.blockFloor {
+  font-size: 0.9rem;
+  color: var(--color-base-1000-60);
+  margin-bottom: 2rem;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  background-color: var(--color-base-0);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.75rem;
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricVal {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-base-1000);
+}
+
+.metricLabel {
+  font-size: 0.75rem;
+  color: var(--color-base-1000-60);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-top: 1px solid var(--color-base-1000-10);
+  border-bottom: 1px solid var(--color-base-1000-10);
+  margin-bottom: 2rem;
+}
+
+.priceLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-base-1000-60);
+}
+
+.priceVal {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-plum);
+}
+
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.primaryActionBtn {
+  width: 100%;
+  padding: 1.15rem;
+  font-size: 0.95rem;
+}
+
+.directButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.specsListSection {
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--color-base-1000-10);
+}
+
+.specsHeading {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-base-1000);
+  margin-bottom: 1.25rem;
+}
+
+.featuresList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--color-base-1000-60);
+}
+
+.featureIcon {
+  color: var(--color-plum);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* ======================================================== */
+/* SIMILAR UNITS SECTION */
+/* ======================================================== */
+.similarSection {
+  background-color: var(--color-base-100);
+  padding: 5rem 0;
+  border-top: 1px solid var(--color-base-1000-10);
+}
+
+.similarHeader {
+  margin-bottom: 3rem;
+}
+
+.sectionSubtitle {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-plum);
+  margin-bottom: 0.5rem;
+}
+
+.similarTitle {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 300;
+  color: var(--color-base-1000);
+}
+
+.similarGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.simCard {
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--color-base-1000-10);
+  transition: transform var(--transition-normal);
+}
+
+.simCard:hover {
+  transform: translateY(-4px);
+}
+
+.simMedia {
+  position: relative;
+  aspect-ratio: 16/10;
+}
+
+.simImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.simBadge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: var(--color-plum);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.simContent {
+  padding: 1.25rem;
+}
+
+.simName {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--color-base-1000);
+  margin-bottom: 0.35rem;
+}
+
+.simSpecs {
+  font-size: 0.82rem;
+  color: var(--color-base-1000-60);
+}
+
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .stickyCard {
+    position: static;
+  }
+  .similarGrid {
+    grid-template-columns: 1fr;
+  }
+}

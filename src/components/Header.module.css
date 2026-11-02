@@ -1,0 +1,348 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 100;
+  transition: background-color var(--transition-normal), backdrop-filter var(--transition-normal), border-bottom var(--transition-normal);
+  background-color: transparent;
+  color: var(--color-base-1000);
+}
+
+.scrolled {
+  background-color: rgba(243, 243, 236, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-base-1000-10);
+  box-shadow: 0 4px 20px rgba(23, 35, 59, 0.04);
+}
+
+.headerContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brandLink {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.navLink {
+  position: relative;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-base-1000);
+  background: none;
+  border: none;
+  padding: 0.4rem 0;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: color var(--transition-fast);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--color-plum);
+  transition: width var(--transition-fast);
+}
+
+.navLink:hover::after,
+.navLink.active::after {
+  width: 100%;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.phoneLink {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-base-1000);
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-base-1000-5);
+  transition: all var(--transition-fast);
+}
+
+.phoneLink:hover {
+  background-color: var(--color-base-1000-10);
+  color: var(--color-plum);
+}
+
+.menuToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-base-1000);
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-full);
+  transition: background-color var(--transition-fast);
+}
+
+.menuToggle:hover {
+  background-color: var(--color-base-1000-5);
+}
+
+.menuIconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--color-plum);
+  color: var(--color-base-0);
+  transition: transform var(--transition-fast);
+}
+
+.menuToggle:hover .menuIconBox {
+  transform: rotate(90deg);
+}
+
+/* Fullscreen Menu Overlay */
+.menuOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: flex-end;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.4s, opacity 0.4s;
+}
+
+.menuOverlay.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menuBackdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(23, 35, 59, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.menuContent {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  height: 100%;
+  background-color: var(--color-base-0);
+  color: var(--color-base-1000);
+  padding: clamp(2rem, 5vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(100%);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+  box-shadow: -15px 0 50px rgba(23, 35, 59, 0.2);
+}
+
+.menuOverlay.open .menuContent {
+  transform: translateX(0);
+}
+
+.menuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-base-1000-10);
+}
+
+.closeBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-base-1000);
+  background-color: var(--color-base-1000-5);
+  transition: all var(--transition-fast);
+}
+
+.closeBtn:hover {
+  background-color: var(--color-plum);
+  color: var(--color-base-0);
+  transform: rotate(90deg);
+}
+
+.menuBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.menuSectionLabel {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-plum);
+  margin-bottom: 1.5rem;
+}
+
+.overlayNav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.overlayLink {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--color-base-1000);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.overlayLink:hover {
+  transform: translateX(8px);
+  color: var(--color-plum);
+}
+
+.overlayNum {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-base-1000-30);
+}
+
+.overlayText {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.overlaySubLink {
+  font-size: 0.9rem;
+  padding-left: 2.2rem;
+  color: var(--color-base-1000-60);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.overlaySubLink:hover {
+  color: var(--color-plum);
+}
+
+.overlayLinkBtn {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  color: var(--color-base-1000);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.overlayLinkBtn:hover {
+  transform: translateX(8px);
+  color: var(--color-plum);
+}
+
+.menuAddress {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-base-1000);
+  margin-bottom: 2rem;
+}
+
+.menuContactLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.menuContactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--color-base-1000-60);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.menuContactItem:hover {
+  color: var(--color-plum);
+}
+
+.menuSocials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-base-1000-10);
+}
+
+.menuSocials a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-base-1000);
+  transition: color var(--transition-fast);
+}
+
+.menuSocials a:hover {
+  color: var(--color-plum);
+}
+
+@media (max-width: 991px) {
+  .desktopNav {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .phoneLink {
+    display: none;
+  }
+  .menuBody {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .menuContent {
+    max-width: 100%;
+  }
+}

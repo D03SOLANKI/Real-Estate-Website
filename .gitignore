@@ -1,0 +1,20 @@
+# Logs & Dev
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# REA Reference Evidence (Reference only - excluded from build and deliverables)
+rea-output/
+analyze-*.js
+inspect-*.js

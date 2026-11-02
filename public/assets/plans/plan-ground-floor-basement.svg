@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #f3f3ec; }
+      .grid { stroke: rgba(23, 35, 59, 0.05); stroke-width: 1; stroke-dasharray: 4,4; }
+      .wall-thick { stroke: #17233b; stroke-width: 4; fill: #e5e5dc; }
+      .wall-thin { stroke: #17233b; stroke-width: 2; fill: none; }
+      .terrace-area { fill: #ebebe2; stroke: #b5cedb; stroke-width: 1.5; stroke-dasharray: 6,4; }
+      .window { stroke: #b5cedb; stroke-width: 3; fill: #ffffff; }
+      .door-arc { stroke: #17233b; stroke-width: 1; stroke-dasharray: 3,3; fill: none; }
+      .door-leaf { stroke: #17233b; stroke-width: 2; }
+      .label-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 700; fill: #17233b; letter-spacing: 0.05em; text-transform: uppercase; }
+      .label-sub { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 500; fill: rgba(23, 35, 59, 0.6); }
+      .dimension { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px; fill: #340c24; font-weight: 600; }
+      .furniture { stroke: rgba(23, 35, 59, 0.35); stroke-width: 1; fill: rgba(255, 255, 255, 0.6); }
+      .accent-plum { stroke: #340c24; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1000" height="700" class="bg" />
+
+  <!-- Grid lines -->
+  <line x1="50" y1="50" x2="950" y2="50" class="grid" />
+  <line x1="50" y1="350" x2="950" y2="350" class="grid" />
+  <line x1="50" y1="650" x2="950" y2="650" class="grid" />
+  <line x1="500" y1="50" x2="500" y2="650" class="grid" />
+
+  <!-- Title & Plan Key -->
+  <text x="60" y="45" class="label-title">Aurelia Residence — Type A: Ground Floor + Private Basement</text>
+  <text x="60" y="65" class="label-sub">3 Bedrooms · 3 Bathrooms · Total Built: 134 m² + 44 m² Private Terrace &amp; Garden</text>
+
+  <!-- TERRACE OUTDOOR AREA (Left/Top) -->
+  <rect x="60" y="90" width="360" height="150" class="terrace-area" />
+  <text x="210" y="165" text-anchor="middle" class="label-title" fill="#17233b">Private Landscaped Terrace &amp; Solarium</text>
+  <text x="210" y="185" text-anchor="middle" class="label-sub">44.0 m² (Direct garden access)</text>
+
+  <!-- MAIN RESIDENCE OUTER BOUNDARY -->
+  <rect x="60" y="240" width="880" height="400" class="wall-thick" />
+
+  <!-- INTERNAL ROOM DIVISIONS -->
+  <!-- Living & Dining Room -->
+  <rect x="65" y="245" width="450" height="230" fill="#fcfcf9" stroke="none" />
+  <text x="280" y="340" text-anchor="middle" class="label-title">Grand Living &amp; Dining Hall</text>
+  <text x="280" y="360" text-anchor="middle" class="label-sub">42.5 m² · High ceilings &amp; floor-to-ceiling glass</text>
+  <!-- Sofa & Coffee table -->
+  <rect x="120" y="280" width="140" height="60" rx="6" class="furniture" />
+  <rect x="150" y="300" width="80" height="30" rx="3" class="furniture" />
+  <!-- Dining Table -->
+  <rect x="340" y="280" width="110" height="70" rx="4" class="furniture" />
+
+  <!-- Designer Kitchen -->
+  <rect x="65" y="480" width="260" height="155" fill="#fcfcf9" stroke="none" />
+  <line x1="60" y1="475" x2="325" y2="475" class="wall-thin" />
+  <text x="190" y="550" text-anchor="middle" class="label-title">Gourmet Kitchen</text>
+  <text x="190" y="570" text-anchor="middle" class="label-sub">15.8 m² · Natural stone island</text>
+  <!-- Kitchen Island -->
+  <rect x="110" y="510" width="140" height="40" rx="3" class="furniture" />
+
+  <!-- Private Basement Access Staircase -->
+  <rect x="330" y="480" width="185" height="155" fill="#f7f7f0" stroke="none" />
+  <line x1="325" y1="475" x2="325" y2="640" class="wall-thin" />
+  <line x1="515" y1="475" x2="515" y2="640" class="wall-thin" />
+  <text x="420" y="540" text-anchor="middle" class="label-title">Internal Stairs</text>
+  <text x="420" y="560" text-anchor="middle" class="label-sub">To Lower Level (46 m²)</text>
+  <!-- Stair steps -->
+  <line x1="340" y1="580" x2="500" y2="580" class="wall-thin" />
+  <line x1="340" y1="595" x2="500" y2="595" class="wall-thin" />
+  <line x1="340" y1="610" x2="500" y2="610" class="wall-thin" />
+  <line x1="340" y1="625" x2="500" y2="625" class="wall-thin" />
+
+  <!-- Central Corridor & Entry Vestibule -->
+  <line x1="515" y1="240" x2="515" y2="640" class="wall-thick" />
+
+  <!-- Master Suite (Right Wing Top) -->
+  <rect x="520" y="245" width="415" height="210" fill="#fcfcf9" stroke="none" />
+  <text x="725" y="330" text-anchor="middle" class="label-title">Primary Master Suite</text>
+  <text x="725" y="350" text-anchor="middle" class="label-sub">24.2 m² · En-suite &amp; walk-in wardrobe</text>
+  <!-- King Bed -->
+  <rect x="680" y="260" width="100" height="90" rx="4" class="furniture" />
+  <rect x="660" y="270" width="15" height="25" rx="2" class="furniture" />
+  <rect x="785" y="270" width="15" height="25" rx="2" class="furniture" />
+
+  <!-- Bedroom 2 & Bedroom 3 (Right Wing Bottom) -->
+  <line x1="515" y1="455" x2="940" y2="455" class="wall-thin" />
+
+  <rect x="520" y="460" width="205" height="175" fill="#fcfcf9" stroke="none" />
+  <text x="620" y="535" text-anchor="middle" class="label-title">Bedroom 02</text>
+  <text x="620" y="555" text-anchor="middle" class="label-sub">14.6 m²</text>
+  <!-- Bed -->
+  <rect x="570" y="480" width="80" height="70" rx="3" class="furniture" />
+
+  <line x1="725" y1="455" x2="725" y2="640" class="wall-thin" />
+
+  <rect x="730" y="460" width="205" height="175" fill="#fcfcf9" stroke="none" />
+  <text x="830" y="535" text-anchor="middle" class="label-title">Bedroom 03</text>
+  <text x="830" y="555" text-anchor="middle" class="label-sub">13.8 m²</text>
+  <!-- Bed -->
+  <rect x="780" y="480" width="80" height="70" rx="3" class="furniture" />
+
+  <!-- Sliding Glass Windows to Terrace -->
+  <rect x="100" y="236" width="280" height="8" class="window" />
+  <text x="240" y="230" text-anchor="middle" class="dimension">Panoramic Sliding Glass (8.2 m)</text>
+
+  <!-- Architectural Compass Rose -->
+  <g transform="translate(900, 100)">
+    <circle cx="0" cy="0" r="22" fill="#ffffff" stroke="#17233b" stroke-width="1.5" />
+    <polygon points="0,-18 5,0 -5,0" fill="#340c24" />
+    <polygon points="0,18 4,0 -4,0" fill="#17233b" opacity="0.4" />
+    <text x="0" y="-22" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#17233b">N</text>
+  </g>
+</svg>

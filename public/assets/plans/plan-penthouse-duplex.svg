@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #f3f3ec; }
+      .grid { stroke: rgba(23, 35, 59, 0.05); stroke-width: 1; stroke-dasharray: 4,4; }
+      .wall-thick { stroke: #17233b; stroke-width: 4; fill: #e5e5dc; }
+      .wall-thin { stroke: #17233b; stroke-width: 2; fill: none; }
+      .terrace-area { fill: #ebebe2; stroke: #b5cedb; stroke-width: 1.5; stroke-dasharray: 6,4; }
+      .solarium-area { fill: #e4e8ee; stroke: #340c24; stroke-width: 1.5; stroke-dasharray: 4,4; }
+      .pool-area { fill: #d5e6f0; stroke: #b5cedb; stroke-width: 2; }
+      .window { stroke: #b5cedb; stroke-width: 3; fill: #ffffff; }
+      .label-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 700; fill: #17233b; letter-spacing: 0.05em; text-transform: uppercase; }
+      .label-sub { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 500; fill: rgba(23, 35, 59, 0.6); }
+      .dimension { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px; fill: #340c24; font-weight: 600; }
+      .furniture { stroke: rgba(23, 35, 59, 0.35); stroke-width: 1; fill: rgba(255, 255, 255, 0.6); }
+    </style>
+  </defs>
+
+  <rect width="1000" height="700" class="bg" />
+
+  <text x="60" y="45" class="label-title">Aurelia Residence — Type C: Penthouse Duplex &amp; Rooftop Solarium</text>
+  <text x="60" y="65" class="label-sub">3 Bedrooms · 3.5 Bathrooms · Interior: 140 m² + 151 m² Private Rooftop Solarium &amp; Sky Lounge</text>
+
+  <!-- Left: Main Residence Living Floor (Width 450) -->
+  <text x="60" y="105" class="label-title" font-size="12px" fill="#340c24">Level 1: Main Residence Floor (140 m²)</text>
+  <rect x="60" y="120" width="420" height="520" class="wall-thick" />
+
+  <!-- Living / Dining on Level 1 -->
+  <rect x="65" y="125" width="410" height="230" fill="#fcfcf9" />
+  <text x="270" y="210" text-anchor="middle" class="label-title">Panoramic Living &amp; Sky Lounge</text>
+  <text x="270" y="230" text-anchor="middle" class="label-sub">48.2 m² · Double aspect skyline vistas</text>
+  <rect x="110" y="150" width="130" height="60" rx="4" class="furniture" />
+  <rect x="300" y="150" width="100" height="60" rx="4" class="furniture" />
+
+  <!-- Level 1 Internal Stairs to Solarium -->
+  <rect x="320" y="280" width="145" height="70" fill="#f7f7f0" class="wall-thin" />
+  <text x="392" y="320" text-anchor="middle" class="label-title" font-size="11px">Stairs to Solarium</text>
+
+  <!-- Bedroom Suites on Level 1 -->
+  <line x1="60" y1="360" x2="480" y2="360" class="wall-thick" />
+  <rect x="65" y="365" width="410" height="270" fill="#fcfcf9" />
+  <text x="270" y="440" text-anchor="middle" class="label-title">Master Suite &amp; Guest Bedrooms</text>
+  <text x="270" y="460" text-anchor="middle" class="label-sub">3 Suites · Private dressing &amp; ensuite baths</text>
+  <rect x="100" y="490" width="80" height="70" rx="3" class="furniture" />
+  <rect x="230" y="490" width="80" height="70" rx="3" class="furniture" />
+  <rect x="350" y="490" width="80" height="70" rx="3" class="furniture" />
+
+  <!-- Right: Rooftop Solarium & Sky Deck (Width 430) -->
+  <text x="520" y="105" class="label-title" font-size="12px" fill="#340c24">Level 2: Private Rooftop Solarium (151 m²)</text>
+  <rect x="520" y="120" width="420" height="520" class="solarium-area" />
+
+  <!-- Private Plunge Pool / Jacuzzi -->
+  <rect x="550" y="150" width="160" height="90" rx="8" class="pool-area" />
+  <text x="630" y="195" text-anchor="middle" class="label-title" fill="#17233b" font-size="12px">Private Jacuzzi / Pool</text>
+  <text x="630" y="215" text-anchor="middle" class="label-sub">Integrated heating &amp; jets</text>
+
+  <!-- Sun Lounging Deck -->
+  <rect x="740" y="150" width="170" height="150" class="terrace-area" rx="6" />
+  <text x="825" y="215" text-anchor="middle" class="label-title" font-size="12px">Sunbathing Deck</text>
+  <text x="825" y="235" text-anchor="middle" class="label-sub">Teak decking</text>
+
+  <!-- Outdoor Kitchen & Pergola Dining -->
+  <rect x="550" y="330" width="360" height="150" fill="#f7f7f0" stroke="#b5cedb" stroke-width="1.5" rx="6" />
+  <text x="730" y="390" text-anchor="middle" class="label-title">Outdoor Kitchen &amp; BBQ Pergola</text>
+  <text x="730" y="410" text-anchor="middle" class="label-sub">Shaded dining with 360° unobstructed city &amp; sunset panorama</text>
+
+  <!-- Stargazing / Sunset Lounge -->
+  <rect x="550" y="510" width="360" height="100" class="terrace-area" rx="6" />
+  <text x="730" y="560" text-anchor="middle" class="label-title" font-size="12px">Sunset Stargazing Lounge</text>
+  <text x="730" y="580" text-anchor="middle" class="label-sub">Built-in lounge seating &amp; fire pit</text>
+
+  <!-- Compass -->
+  <g transform="translate(900, 60)">
+    <circle cx="0" cy="0" r="18" fill="#ffffff" stroke="#17233b" stroke-width="1.5" />
+    <polygon points="0,-14 3,0 -3,0" fill="#340c24" />
+    <polygon points="0,14 3,0 -3,0" fill="#17233b" opacity="0.4" />
+    <text x="0" y="-17" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#17233b">N</text>
+  </g>
+</svg>
